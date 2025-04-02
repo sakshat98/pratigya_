@@ -1,1 +1,0 @@
-# pratigya_
