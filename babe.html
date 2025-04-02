@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Date Request</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pratigya Regmi, will you go on a movie date with me?🍿❤️</h2>
+        <div class="buttons">
+            <button class="btn yes" onclick="acceptDate()">Yes</button>
+            <button class="btn no" onclick="moveButton()">No</button>
+        </div>
+    </div>
+    <script>
+        function acceptDate() {
+            alert("Yay! Can't wait for our movie date! 🎉🥰");
+        }
+
+        function moveButton() {
+            let button = document.querySelector('.no');
+            let maxX = window.innerWidth - 100;
+            let maxY = window.innerHeight - 50;
+            let randomX = Math.floor(Math.random() * maxX);
+            let randomY = Math.floor(Math.random() * maxY);
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
